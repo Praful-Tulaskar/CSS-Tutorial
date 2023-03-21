@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            height: 500px;
+            border: 2px solid black;
+            margin: 10px;
+
+            /* Flex Property for Parent/Container */
+            display: flex;      /* Initialize the container as flexbox */
+
+            flex-direction: row;    /* By Default */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            flex-wrap: nowrap;    /* By Default */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            flex-flow: row nowrap;    /* Shorthand property for flex direction and flex-wrap */
+            
+            /* Will justify the content in horizontal direction */
+            justify-content: space-between; /* Space between 2 items is same and at the end has no space */
+            justify-content: space-around;  /* left and right or top and bottom space of each item is same */
+            justify-content: space-evenly;  /* All spaces that is both the ends and between items are same */
+            justify-content: center;
+
+            /* Will justify the content in vertical direction */
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: stretch;       /* Demo:- https://www.w3schools.com/cssref/playdemo.php?filename=playcss_align-items&preval=stretch */
+            align-items: center;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            margin: 10px;
+        }
+
+        #item1{
+            background-color: rosybrown;
+            /* Flex Property for flex children/item */
+            
+            /* order: 2; */     /* Higher the order later it shows up(at the end) in the container Lower shows it in the start */
+
+
+        }
+        #item2{background-color: rosybrown;
+            /* order: 5; */
+            /* flex-grow: 5; */
+            /* flex-shrink: 10; */
+
+            flex-basis: 200px;  /* When flex direction is "row" flex basis will controls the width.
+                                   When flex direction is "columns" flex basis will controls the height. */
+            
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+        }
+        #item3{background-color: rosybrown;
+            /* order: 1; */
+        }
+        #item4{background-color: rosybrown;}
+        #item5{background-color: rosybrown;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">Box-1</div>
+        <div class="item" id="item2">Box-2</div>
+        <div class="item" id="item3">Box-3</div>
+        <div class="item" id="item4">Box-4</div>
+        <div class="item" id="item5">Box-5</div>
+    </div>
+</body>
+</html>

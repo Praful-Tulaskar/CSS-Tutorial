@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: lightgreen;
+            border: 2px solid black;
+            width: 90%;
+            height: 3000px;
+            margin: 20px;
+        }
+        .box{
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            
+        }
+        #box3{
+            /* CSS Position Property: static(default), absolute, relative, fixed, sticky */
+
+            /* position: absolute;      Relative to its first parent. */
+
+            /* position: relative;    Relative to its normal/original position and leave gap to its normal/original position */
+
+            /* position: fixed;    Relative to browser window. */
+
+            /* position: sticky;   Position of element based on user's scroll position. */
+            
+            top: 20px;
+            right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box-1</div>
+        <div class="box" id="box2">box-2</div>
+        <div class="box" id="box3">box-3</div>
+        <div class="box" id="box4">box-4</div>
+    </div>
+    <div class="container"></div>
+</body>
+</html>
